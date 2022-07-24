@@ -7,4 +7,4 @@
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
     <title>AdministradorEst</title>
 </head>
-<body>
+<body class="m-0 vh-100 row justify-content-center align-items-center">

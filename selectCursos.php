@@ -3,8 +3,9 @@
     if(!isset($_SESSION['codigo_user'])){
         header("location:index.php");
     }
-    session_destroy();
     $user=$_SESSION['codigo_user'];
+    $nombre_user=$_SESSION['nombre_user'];
+    session_destroy();
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +16,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>has entrado</h1>
+    <h1>bienvenido <?php  echo $nombre_user ?></h1>
 </body>
 </html>
