@@ -10,6 +10,6 @@
         $_SESSION['codigo_user']=$user;
         header("location:../selectCursos.php");
     }else{
-        header("location:../index.php");
+        echo "<script>alert('mmapinga');</script>";
     }
  ?>
