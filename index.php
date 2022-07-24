@@ -7,6 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-dark"><h1></h1></nav>
+    <h2>Iniciar sesión</h2>
+    <form action="log/loguearse.php" method="POST">
+        <input type="text" name="user" id="01" placeholder="Ingrese su usuario">
+        <br><br>
+        <input type="password" name="contraseña" placeholder="Ingrese su contraseña">
+        <button type="submit">Ingresar</button>
+    </form>
 </body>
 </html>
