@@ -24,13 +24,19 @@
     <h1>bienvenido <?php  echo $nombre_user ?></h1>
 
     <div>
+        <select name="cursos">
     <?php
         $query="select nomb_cur from cursos where cod_doc='$user'";
         $query=pg_query($query);
         while($row=pg_fetch_object($query)){
-            echo $row->nomb_cur;
+            echo "<option>";
+            echo $row->nomb_cur."<br/>";
+            echo "</option>";
         }
     ?>
+    </select>
+
+        
     </div>
 
     <div>
