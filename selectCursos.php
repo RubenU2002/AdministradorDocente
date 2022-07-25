@@ -19,13 +19,20 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>bienvenido <?php  echo $nombre_user ?></h1>
+   
+<form action="log/logout.php">
+        <button type="submit" class="btn btn-dark" >Cerrar sesion</a></button>
+        
+        </form>   
+        <h6 class="badge bg-black text-wrap ">Bienvenido <?php  echo $nombre_user ?></h6>
+    <div class="m-0 vh-100 row justify-content-center align-items-center" >
 
-    <div>
+        <div class="col-auto">
         <form method="POST" action="insetarEst.php">
-        <?php echo "Curso:    ";?>
-        <select name="cursos">
 
+        
+        <p>Cursos:  <select name="cursos"  class="form-select form-select-sm" aria-label=".form-select-sm example">
+    <option>Seleccionar Curso</option>
     <?php
         $query="select nomb_cur from cursos where cod_doc='$user'";
         $query=pg_query($query);
@@ -36,18 +43,30 @@
             echo "</option>";
         }
     ?>
-    </select>
+   </select></p>
+
+        <p>Año: <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option>2019</option>
+            <option>2020</option>
+            <option>2021</option>
+            <option>2022</option>
+        </select></p>
+
+        <p>Periodo: <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option>1</option>
+            <option>2</option>
+        </select></p>
+
     <?php echo "<br>"."Estudiantes";?>
-    <button type="submit">Ver listado</button>
+    <button type="submit" class="btn btn-outline-success">Ver listado</button>
+
     </form>
+    </div>
+   
         
     </div>
 
-    <div>
-        <form action="log/logout.php">
-            <button typle="submit">cerrar sesion</a> </button>
-        </form>       
-    </div>
+   
      <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
