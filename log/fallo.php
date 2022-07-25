@@ -8,7 +8,9 @@
     <title>fallo</title>
 </head>
 <body class="m-0 vh-100 row justify-content-center align-items-center">
+    
     <div class="col-auto p-5 text-center">
+        
     <div class="alert alert-danger" role="alert">
         Usuario y/o contraseña incorrectos!
     </div>
