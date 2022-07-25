@@ -12,6 +12,7 @@
     <title>InsertarEstuiante</title>
 </head>
 <body >
+    
     <div class="m-0 vh-100 row justify-content-left align-items-left">
         <div class="col-auto p-5 text-center">
             <form action="insertarEnCursos/inscribirEst.php">

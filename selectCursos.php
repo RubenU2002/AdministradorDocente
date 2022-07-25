@@ -45,20 +45,20 @@
     ?>
    </select></p>
 
-        <p>Año: <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+        <p>Año: <select name='year' class="form-select form-select-sm" aria-label=".form-select-sm example">
             <option>2019</option>
             <option>2020</option>
             <option>2021</option>
             <option>2022</option>
         </select></p>
 
-        <p>Periodo: <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+        <p>Periodo: <select name='periodo' class="form-select form-select-sm" aria-label=".form-select-sm example">
             <option>1</option>
             <option>2</option>
         </select></p>
 
     <?php echo "<br>"."Estudiantes";?>
-    <button type="submit" class="btn btn-outline-success">Ver listado</button>
+    <button type="submit" name='listado' class="btn btn-outline-success">Ver listado</button>
 
     </form>
     </div>
