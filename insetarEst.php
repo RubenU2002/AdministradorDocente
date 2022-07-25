@@ -11,20 +11,21 @@
     <title>InsertarEstuiante</title>
 </head>
 <body >
+
     <div class="m-0 vh-100 row justify-content-center align-items-center">
+    <div class="col-auto p-5 text-center">
     <select class="form-select" aria-label="Default select example">
         <option selected>Seleccionar estudiante</option>
         <?php
-            $consulta="select * from estudiantes";
-            while($objEstu=pg_fetch_object($consulta)){?>
-                <option><?php echo $objEst->cod_est; ?></option>
+            $consulta=pg_query("select * from estudiantes");
+            while($objEstu=pg_fetch_object($consulta)){
+            ?>
+                <option><?php echo $objEstu->cod_est," | ",$objEstu->nomb_est; ?></option>
             <?php
             }
          ?>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
     </select>
+    </div>
     </div>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
  </body>
