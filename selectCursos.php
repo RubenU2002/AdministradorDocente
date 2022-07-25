@@ -15,7 +15,6 @@
     <title>Document</title>
 </head>
 <body>
-    Sexo en la playa
     <h1>bienvenido <?php  echo $nombre_user ?></h1>
     <div>
         <form action="log/logout.php">
