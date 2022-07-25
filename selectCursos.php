@@ -22,10 +22,14 @@
     <h1>bienvenido <?php  echo $nombre_user ?></h1>
 
     <div>
+        <form method="POST" action="insetarEst.php">
+        <?php echo "Curso:    ";?>
         <select name="cursos">
+
     <?php
         $query="select nomb_cur from cursos where cod_doc='$user'";
         $query=pg_query($query);
+        
         while($row=pg_fetch_object($query)){
             echo "<option>";
             echo $row->nomb_cur."<br/>";
@@ -33,7 +37,9 @@
         }
     ?>
     </select>
-
+    <?php echo "<br>"."Estudiantes";?>
+    <button type="submit">Ver listado</button>
+    </form>
         
     </div>
 
