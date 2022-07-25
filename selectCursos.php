@@ -19,8 +19,6 @@
     <title>Document</title>
 </head>
 <body>
-    
-
     <h1>bienvenido <?php  echo $nombre_user ?></h1>
 
     <div>
