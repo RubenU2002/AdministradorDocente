@@ -5,7 +5,6 @@
     }
     $user=$_SESSION['codigo_user'];
     $nombre_user=$_SESSION['nombre_user'];
-    session_destroy();
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,5 +16,11 @@
 </head>
 <body>
     <h1>bienvenido <?php  echo $nombre_user ?></h1>
+    <div>
+        <form action="log/logout.php">
+            <button typle="submit">cerrar sesion</a> </button>
+        </form>
+        
+    </div>
 </body>
 </html>

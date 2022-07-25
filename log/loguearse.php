@@ -1,4 +1,4 @@
-<?php 
+<?php
     include_once("../conexion.php");
     session_start();
     $user= $_POST['user'];
@@ -12,7 +12,6 @@
         $_SESSION['nombre_user']=$row->nomb_doc;
         header("location:../selectCursos.php");
     }else{
-        $_SESSION['fallo_auten']= "Nombre de usuario y/o contraseña incorrectos";
-        header("location:../index.php");
+        header("location:fallo.php");
     }
  ?>
