@@ -19,54 +19,44 @@
     <title>Document</title>
 </head>
 <body>
-   
-<form action="log/logout.php">
+    <form action="log/logout.php">
         <button type="submit" class="btn btn-dark" >Cerrar sesion</a></button>
-        
-        </form>   
-        <h6 class="badge bg-black text-wrap ">Bienvenido <?php  echo $nombre_user ?></h6>
+    </form>   
+    <h6 class="badge bg-black text-wrap ">Bienvenido <?php  echo $nombre_user ?></h6>
     <div class="m-0 vh-100 row justify-content-center align-items-center" >
-
         <div class="col-auto">
         <form method="POST" action="insetarEst.php">
-
-        
-        <p>Cursos:  <select name="cursos"  class="form-select form-select-sm" aria-label=".form-select-sm example">
-    <option>Seleccionar Curso</option>
-    <?php
-        $query="select nomb_cur from cursos where cod_doc='$user'";
-        $query=pg_query($query);
-        
-        while($row=pg_fetch_object($query)){
-            echo "<option>";
-            echo $row->nomb_cur."<br/>";
-            echo "</option>";
-        }
-    ?>
-   </select></p>
-
-        <p>Año: <select name='year' class="form-select form-select-sm" aria-label=".form-select-sm example">
-            <option>2019</option>
-            <option>2020</option>
-            <option>2021</option>
-            <option>2022</option>
-        </select></p>
-
-        <p>Periodo: <select name='periodo' class="form-select form-select-sm" aria-label=".form-select-sm example">
-            <option>1</option>
-            <option>2</option>
-        </select></p>
-
-    <?php echo "<br>"."Estudiantes";?>
-    <button type="submit" name='listado' class="btn btn-outline-success">Ver listado</button>
-
-    </form>
-    </div>
-   
-        
-    </div>
-
-   
-     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+            <p>Cursos:  
+            <select name="cursos"  class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option>Seleccionar Curso</option>
+                <?php
+                $query="select nomb_cur from cursos where cod_doc='$user'";
+                $query=pg_query($query);
+                
+                while($row=pg_fetch_object($query)){
+                    echo "<option>";
+                    echo $row->nomb_cur."<br/>";
+                    echo "</option>";
+                }
+                ?>
+            </select></p>
+            <p>Año: 
+            <select name='year' class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option>2019</option>
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+            </select></p>
+            <p>Periodo:
+            <select name='periodo' class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option>1</option>
+                <option>2</option>
+            </select></p>
+            <?php echo "<br>"."Estudiantes";?>
+            <button type="submit" name='listado' class="btn btn-outline-success">Ver listado</button>
+        </form>
+        </div>    
+    </div> 
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
