@@ -1,12 +1,6 @@
 <?php 
     session_start();
-    include_once("conexion.php");
-    $curso = $_POST['cursos'];
-    $year = $_POST['year'];
-    $periodo = $_POST['periodo'];
-    $_SESSION['curso']=$curso;
-    $_SESSION['year']=$year;
-    $_SESSION['periodo']=$periodo;
+    include_once("../conexion.php");
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
     <title>InsertarEstudiante</title>
 </head>
 <body >
@@ -36,14 +30,14 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form method="POST" action="insertarEnCursos/inscribirEst.php">
-                <select name="codigo" class="form-select" aria-label="Default select example">
+        <form method="POST" action="inscribirEst.php">
+                <select name="codigo_est" class="form-select" aria-label="Default select example">
                     <option selected>Seleccionar estudiante</option>
                     <?php
                         $consulta=pg_query("select * from estudiantes order by cod_est");
                         while($objEstu=pg_fetch_object($consulta)){
                         ?>
-                          <option value="<?php echo $objEstu->cod_est?>"> <?php echo $objEstu->nomb_est," | ",$objEstu->cod_est; ?></option>
+                          <option value="<?php $objEstu->cod_est?>"> <?php echo $objEstu->nomb_est," | ",$objEstu->cod_est; ?></option>
                         <?php
                         }
                     ?>
@@ -63,6 +57,6 @@
     </div>
   </div>
 </div>
-<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
  </body>
  </html>
