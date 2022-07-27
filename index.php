@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
     <title>Inicio sesión</title>
+    <link rel="stylesheet" href="estilos/styles.css">
 </head>
 <body>
         <div class="m-0 vh-100 row justify-content-center align-items-center">
-            <div class="container bg-light text-dark col-auto p-5 text-center">
-                <form action="log/loguearse.php" method="POST">
-                    <h2>Iniciar sesión</h2>
+            <div class="container bg-ligth text-dark col-auto p-5 text-center">
+                <form action="log/loguearse.php" method="POST" class="form-box">
+                    <h2 class="form-title">Iniciar sesión</h2>
                     <br>
                     <input type="text" name="user" id="01" placeholder="Ingrese su usuario">
                     <br><br>
