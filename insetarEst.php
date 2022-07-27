@@ -40,7 +40,7 @@
                 <select name="codigo" class="form-select" aria-label="Default select example">
                     <option selected>Seleccionar estudiante</option>
                     <?php
-                        $consulta=pg_query("select * from estudiantes order by cod_est");
+                        $consulta=pg_query("select * from estudiantes e where e.cod_est not in(select e.cod_est from estudiantes e,cursos c, inscripciones i where i.cod_cur=c.cod_cur and e.cod_est=i.cod_est and c.cod_cur='$curso' and i.year='$year' and i.periodo='$periodo') order by e.cod_est");
                         while($objEstu=pg_fetch_object($consulta)){
                         ?>
                           <option value="<?php echo $objEstu->cod_est?>"> <?php echo $objEstu->nomb_est," | ",$objEstu->cod_est; ?></option>
