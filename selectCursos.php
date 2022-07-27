@@ -19,10 +19,12 @@
     <title>Document</title>
 </head>
 <body>
+    <?php
+        include_once("navbar.php");
+    ?>
     <form action="log/logout.php">
         <button type="submit" class="btn btn-dark" >Cerrar sesion</a></button>
     </form>   
-    <h6 class="badge bg-black text-wrap ">Bienvenido <?php  echo $nombre_user ?></h6>
     <div class="m-0 vh-100 row justify-content-center align-items-center" >
         <div class="col-auto">
             <form method="POST" action="insetarEst.php">
