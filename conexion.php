@@ -1,3 +1,3 @@
 <?php
-    $conect = pg_connect("host = rosie.db.elephantsql.com dbname = bsndyujq user = bsndyujq password = rQFOjrE1Gomd3ymaYJOcFAi08C-EH71C");
+    $conect = pg_connect("host = queenie.db.elephantsql.com dbname = vhegquhd user = vhegquhd password = LgjUfwAO_0p5JRtNSUscY1Bza1vDx-or");
 ?>

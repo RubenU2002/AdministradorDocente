@@ -70,7 +70,7 @@
   </div>
   <div>
   </div>
-  
+
 <!-- Modal -->
 <div class="modal fade" id="modalconfirmacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -81,7 +81,7 @@
       </div>
       <div class="modal-body">
         <form action="modificaciones/eliminar.php" method="POST">
-        ¿Seguro desea borrar a <input id="recibirnombre" type="text" name ="nombre_prueba">  del curso?
+        ¿Seguro desea borrar a <input id="recibirnombre" type="text" name ="nombre_prueba" disabled class="text-center">  del curso?
       </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
