@@ -97,7 +97,7 @@
 </div>
 <!---------------------->
   <br>
-  <div class="col-auto p-5 text-center">
+  <div>
     <table id="example" class="table table-striped" style="width:100%">
       <thead>
         <tr>
