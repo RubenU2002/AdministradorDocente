@@ -42,8 +42,8 @@
         </div>
         <div class="modal-body">
           <form method="POST" action="insertarEnCursos/inscribirEst.php">
-                  <select name="codigo" class="form-select" aria-label="Default select example">
-                      <option selected>Seleccionar estudiante</option>
+                  <select name="codigo" class="form-select" aria-label="Default select example" required>
+                      <option value="" selected disabled>Seleccionar estudiante</option>
                       <?php
                           $consulta=pg_query("select * from estudiantes e where e.cod_est not in(select e.cod_est from estudiantes e,cursos c, inscripciones i where i.cod_cur=c.cod_cur and e.cod_est=i.cod_est and c.cod_cur='$curso' and i.year='$year' and i.periodo='$periodo') order by e.cod_est");
                           while($objEstu=pg_fetch_object($consulta)){
@@ -138,6 +138,9 @@
       </tfoot>
     </table>
   </div>
+  <form action="notasycalificaciones/insertarNotas.php">
+    <button type="submit" class="btn btn-info">Notas del curso</button>
+  </form>
   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>

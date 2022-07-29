@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
     
-    <title>Document</title>
+    <title>Seleccionar curso</title>
 </head>
 <body>
     <?php
@@ -29,8 +29,8 @@
         <div class="col-auto">
             <form method="POST" action="insetarEst.php">
                 <p>Cursos:  
-                <select name="cursos"  class="form-select form-select-sm" aria-label=".form-select-sm example">
-                    <option>Seleccionar Curso</option>
+                <select name="cursos"  class="form-select form-select-sm" aria-label=".form-select-sm example" required>
+                    <option value="" selected disabled>Seleccionar Curso</option>
                     <?php
                     $query="select * from cursos where cod_doc='$user'";
                     $query=pg_query($query);
@@ -44,16 +44,18 @@
                     ?>
                 </select></p>
                 <p>Año: 
-                <select name='year' class="form-select form-select-sm" aria-label=".form-select-sm example">
-                    <option>2019</option>
-                    <option>2020</option>
-                    <option>2021</option>
-                    <option>2022</option>
+                <select name='year' class="form-select form-select-sm" aria-label=".form-select-sm example" required>
+                    <option value=""selected disabled>Elija un año</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
                 </select></p>
                 <p>Periodo:
-                <select name='periodo' class="form-select form-select-sm" aria-label=".form-select-sm example">
-                    <option>1</option>
-                    <option>2</option>
+                <select name='periodo' class="form-select form-select-sm" aria-label=".form-select-sm example" required>
+                    <option value="">Elija el periodo</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
                 </select></p>
                 <?php echo "<br>"."Estudiantes";?>
                 <button type="submit" name='listado' class="btn btn-outline-success">Ver listado</button>
