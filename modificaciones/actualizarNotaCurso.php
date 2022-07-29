@@ -8,4 +8,5 @@
 
     echo "vieva", $notaold, "nueva",$notanew,"descrip", $descrip,"porcen",$porcentaje;
     pg_query("update notas cascade set nota=$notanew, desc_nota='$descrip', porcentaje=$porcentaje where nota='$notaold'");
+    header("location:../notasycalificaciones/insertarNotas.php");
 ?>

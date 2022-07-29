@@ -135,6 +135,9 @@
               </svg>
             </button>
           </td>
+          <td>
+            
+          </td>
         </tr>
       <?php } ?>
       </tbody>
