@@ -1,7 +1,6 @@
 <?php 
     session_start();
-    $nota= $_POST['nota'];
-    $_SESSION['nota']=$nota;
+    $nota=$_SESSION['nota'];
     $curso=$_SESSION['curso'];
     $year=$_SESSION['year'];
     $periodo=$_SESSION['periodo'];

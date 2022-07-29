@@ -1,7 +1,6 @@
 <?php 
     session_start();
-    $nota= $_POST['nota'];
-    $_SESSION['nota']=$nota;
+    $nota=$_SESSION['nota'];
     $curso=$_SESSION['curso'];
     $year=$_SESSION['year'];
     $periodo=$_SESSION['periodo'];
@@ -25,6 +24,11 @@
     <h2>Descripcion: <?php echo $notas->desc_nota ?> </h2>
     <h2>Porcentaje: <?php echo  $notas->porcentaje?>% </h2>
     <br>
+    <br>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>La posición de la nota ya existe! intente con una diferente</strong><br>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
     <div class="modal fade" id="modaleditcalificacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
