@@ -39,7 +39,7 @@
         <tr>
           <th scope="row">Codigo</th>
           <?php 
-            $secNotas = pg_query("select * from notas where cod_cur='$curso' and year='$year' and periodo='$periodo' order by nota");
+            $secNotas = pg_query("select * from notas where cod_cur='$curso' and year='$year' and periodo='$periodo' order by posicion");
             while($mostrarSec=pg_fetch_object($secNotas)){?>
                 <th><?php echo $mostrarSec->porcentaje ?>%</th>
             <?php } ?>
@@ -51,7 +51,8 @@
                 <tr>
                 <td><?php echo $mostrarSecCal->cod_est ?></td>
                     <?php
-                        $secNotas = pg_query("select * from calificaciones where cod_cur='$curso' and year='$year' and periodo='$periodo' and cod_est='$mostrarSecCal->cod_est' order by nota");
+                    //select * from calificaciones c, notas n where n.nota=c.nota and c.year='2019' and c.periodo='1' and c.cod_cur='c1' and cod_est='E1' order by n.posicion 
+                        $secNotas = pg_query("select * from calificaciones c, notas n where n.nota=c.nota and c.cod_cur='$curso' and c.year='$year' and c.periodo='$periodo' and c.cod_est='$mostrarSecCal->cod_est' order by n.posicion");
                         while($mostrarSec=pg_fetch_object($secNotas)){?>
                             <td><?php echo $mostrarSec->valor ?></td>
                     <?php }?>
@@ -66,7 +67,7 @@
         <tr>
             <th></th>
         <?php 
-            $secNotas1 = pg_query("select * from notas where cod_cur='$curso' and year='$year' and periodo='$periodo' order by nota");
+            $secNotas1 = pg_query("select * from notas where cod_cur='$curso' and year='$year' and periodo='$periodo' order by posicion");
             while($mostrarSec1=pg_fetch_object($secNotas1)){?>
                 <th><?php echo $mostrarSec1->desc_nota ?></th>
             <?php } ?>
