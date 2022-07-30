@@ -56,7 +56,10 @@
                         while($mostrarSec=pg_fetch_object($secNotas)){?>
                             <td><?php echo $mostrarSec->valor ?></td>
                     <?php }?>
-                    <td></td>
+                    <?php $queryprom= pg_query("select sum(p.prom) from(select (valor*n.porcentaje/(10))/10 as prom,c.cod_est from calificaciones c, notas n where n.nota=c.nota and cod_est='$mostrarSecCal->cod_est') p");
+                    $def=pg_fetch_object($queryprom);
+                    ?>
+                    <td> <?php echo $def->sum ?></td>
                 </tr>
             <?php }?>
       </tbody>
