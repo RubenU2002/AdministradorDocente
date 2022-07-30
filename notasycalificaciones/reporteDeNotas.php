@@ -28,7 +28,7 @@
         <tr>
           <th></th>
           <?php 
-            $secNotas = pg_query("select * from notas where cod_cur='$curso' and year='$year' and periodo='$periodo' order by posicion");
+            $secNotas = pg_query("select * from notas where cod_cur='$curso' and year='$year' and periodo='$periodo' order by nota");
             while($mostrarSec=pg_fetch_object($secNotas)){?>
                 <th><?php echo $mostrarSec->desc_nota ?></th>
             <?php } ?>
@@ -47,7 +47,6 @@
         </tr>
         <?php 
             $secCalificaciones= pg_query("select distinct cod_est from calificaciones where cod_cur='$curso' and year='$year' and periodo='$periodo' order by cod_est");
-            
             while($mostrarSecCal=pg_fetch_object($secCalificaciones)){?>
                 <tr>
                 <td><?php echo $mostrarSecCal->cod_est ?></td>
@@ -67,9 +66,9 @@
         <tr>
             <th></th>
         <?php 
-            $secNotas = pg_query("select * from notas where cod_cur='$curso' and year='$year' and periodo='$periodo' order by nota");
-            while($mostrarSec=pg_fetch_object($secNotas)){?>
-                <th><?php echo $mostrarSec->desc_nota ?></th>
+            $secNotas1 = pg_query("select * from notas where cod_cur='$curso' and year='$year' and periodo='$periodo' order by nota");
+            while($mostrarSec1=pg_fetch_object($secNotas1)){?>
+                <th><?php echo $mostrarSec1->desc_nota ?></th>
             <?php } ?>
                 <th>DEFINITIVA</th>
         </tr>
