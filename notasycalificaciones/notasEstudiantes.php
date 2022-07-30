@@ -21,6 +21,7 @@
     <title>Escribir Notas</title>
 </head>
 <body>
+  <?php echo $nota; ?>
     <h1>Registro de notas de: <?php echo $cursos->nomb_cur ?></h1>
     <h2>Descripcion: <?php echo $notas->desc_nota ?> </h2>
     <h2>Porcentaje: <?php echo  $notas->porcentaje?>% </h2>
@@ -58,6 +59,7 @@
       </thead>
       <tbody>
         <?php 
+        echo $nota;
           $sql="select * from calificaciones c join estudiantes e on e.cod_est=c.cod_est where c.cod_cur='$curso' and c.nota='$nota' and c.periodo='$periodo' and c.year='$year'";
           $result=pg_query($sql);
           $contar=1;

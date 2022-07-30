@@ -28,7 +28,7 @@
         }
         else{
             pg_query("insert into notas(desc_nota,porcentaje,posicion,cod_cur,year,periodo) values('$descripNota',$porcentNota,$posNota,'$curso','$year','$periodo')");
-            $query1=pg_query("select * from notas where year='$year' and periodo='$periodo' and nota not in(select nota from calificaciones where cod_cur='$curso' and year='$year' and periodo='$periodo')");
+            $query1=pg_query("select * from notas where year='$year' and cod_cur='$curso' and periodo='$periodo' and nota not in(select nota from calificaciones where cod_cur='$curso' and year='$year' and periodo='$periodo')");
             $notaFaltante=pg_fetch_object($query1);
             while($objEst=pg_fetch_object($consultaEst)){
                 pg_query("insert into calificaciones(nota,cod_cur,cod_est,year,periodo) values($notaFaltante->nota,'$curso','$objEst->cod_est','$year','$periodo')");
