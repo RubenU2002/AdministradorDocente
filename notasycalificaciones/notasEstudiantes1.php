@@ -20,6 +20,9 @@
     <title>Escribir Notas</title>
 </head>
 <body>
+    <form action="insertarNotas.php">
+        <button type="submit">Volver</button>
+    </form>
     <h1>Registro de notas de: <?php echo $cursos->nomb_cur ?></h1>
     <h2>Descripcion: <?php echo $notas->desc_nota ?> </h2>
     <h2>Porcentaje: <?php echo  $notas->porcentaje?>% </h2>
@@ -87,11 +90,11 @@
     </table>
   </div>
     
-<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
-<script src="../javascript/tablacalificaciones.js"></script>
+  <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+<script src="../javascript/app.js"></script>
     <script src="../javascript/pasarcalificaciones.js"></script>
 </body>
 </html>

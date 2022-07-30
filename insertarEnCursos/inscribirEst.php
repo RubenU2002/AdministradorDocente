@@ -8,10 +8,10 @@
     $periodo = $_SESSION['periodo'];
     pg_query("insert into inscripciones values('$curso','$codigo_est','$year','$periodo')");
 
-    $consultacant = pg_query("select * from notas where cod_cur='$curso'");
+    $consultacant = pg_query("select * from notas where cod_cur='$curso' and year='$year' and periodo='$periodo'");
     $cant= pg_num_rows($consultacant);
 
-    $notas = pg_query("select * from notas where cod_cur='$curso'");
+    $notas = pg_query("select * from notas where cod_cur='$curso' and year='$year' and periodo='$periodo'");
 
     if($cant!=0){
         while($obj=pg_fetch_object($notas)){
