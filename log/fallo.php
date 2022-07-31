@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
     <title>fallo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
+    <link rel="stylesheet" href="estilos/styles.css">
 </head>
-<body >
+<body>
     <div class="m-0 vh-100 row justify-content-center align-items-center">
-        <div class="col-auto p-5 text-center">
+        <div class="col-auto p-5 text-center animated fadeIn">
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
             Usuario y/o contraseña incorrectos!
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>

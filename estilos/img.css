@@ -1,0 +1,22 @@
+header{
+    display: flex;
+    height: 60px;
+    width: 250px;
+    border-radius: 15px;
+    justify-content: space-between;
+    font-family:georgia;
+    color:#c7f9cc;
+    margin: 0;
+    
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo-img{
+    height: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+}

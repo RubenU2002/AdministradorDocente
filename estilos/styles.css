@@ -1,5 +1,11 @@
 body{
-   background:#022b3a; 
+    background: linear-gradient(to bottom, #022b3a, #74c69d);
+}   
+
+.login-img{
+    height: 80px;
+    width: 80px;
+
 }
 
 .form-title{
