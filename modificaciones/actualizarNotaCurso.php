@@ -25,7 +25,7 @@
                 header("location:../notasycalificaciones/errorPorcentaje.php");
             }
             else{
-                pg_query("update notas cascade set posicion=$notanew, desc_nota='$descrip', porcentaje=$porcentaje where posicion='$notaold'");
+                pg_query("update notas cascade set posicion=$notanew, desc_nota='$descrip', porcentaje=$porcentaje where posicion='$notaold' and year='$year' and periodo='$periodo' and cod_cur='$curso'");
                 header("location:../notasycalificaciones/insertarNotas.php");
             }
         }
@@ -35,7 +35,7 @@
             header("location:../notasycalificaciones/errorPorcentaje.php");
     }
     else{
-        pg_query("update notas cascade set posicion=$notanew, desc_nota='$descrip', porcentaje=$porcentaje where posicion='$notaold'");
+        pg_query("update notas cascade set posicion=$notanew, desc_nota='$descrip', porcentaje=$porcentaje where posicion='$notaold' and year='$year' and periodo='$periodo' and cod_cur='$curso'");
         header("location:../notasycalificaciones/insertarNotas.php");
     }
 ?>
