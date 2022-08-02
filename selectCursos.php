@@ -15,21 +15,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos/loader.css">
     <link rel="stylesheet" href="estilos/cursos.css">
     
     <title>Seleccionar curso</title>
 </head>
 <body>
-    <div class="container mt-3">
-        <div class="spinner-grow" role="status">
-        <span class="visually-hidden">Loading...</span>
-        </div>
+<div class="contenedor_loader">
+        <div class="loader"></div>
     </div>
-
-
-    <?php
-    include_once("navbar.php");
-    ?>
 
 
     <form action="log/logout.php" class="box">
@@ -72,7 +66,7 @@
             </form>
         </div>    
     </div> 
-
+    <script src="javascript/script.js">
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
