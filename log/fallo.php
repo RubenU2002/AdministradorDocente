@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
     <title>fallo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
-    <link rel="stylesheet" href="estilos/styles.css">
+    <link rel="stylesheet" href="../estilos/styles.css">
 </head>
 <body>
     <div class="m-0 vh-100 row justify-content-center align-items-center">
@@ -16,14 +16,20 @@
             Usuario y/o contraseña incorrectos!
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
-            <form action="loguearse.php" method="POST">
-                <h2>Iniciar sesión</h2>
+        <div class="container bg-ligth text-dark col-auto p-5 text-center">
+        <div class="login">
+                    <img src="../login.png" alt="login" class="login-img">
+            </div>
+            <form action="loguearse.php" method="POST" class="form-box">
+                <h2 class="form-title">Iniciar sesión</h2>
+                <br>
                 <input type="text" name="user" id="01" placeholder="Ingrese su usuario">
                 <br><br>
                 <input type="password" name="contraseña" placeholder="Ingrese su contraseña">
                 <br><br>
-                <button type="submit" class="btn btn-success">Iniciar</button>
+                <button type="submit" class="btn btn-success w-100">Iniciar</button>
             </form>
+        </div>
         </div>  
     </div>
     <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
