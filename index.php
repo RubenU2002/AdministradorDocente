@@ -7,9 +7,14 @@
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
     <title>Inicio sesión</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
+    <link rel="stylesheet" href="estilos/loader.css">
     <link rel="stylesheet" href="estilos/styles.css">
 </head>
 <body style="overflow-x:hidden; overflow-y:hidden">
+
+    <div class="contenedor_loader">
+        <div class="loader"></div>
+    </div>
 
         <div class="m-0 vh-100 row justify-content-center align-items-center">
             <div class="container bg-ligth text-dark col-auto p-5 text-center animated fadeIn">
@@ -29,6 +34,8 @@
                 </form>
                 </div>  
     </div>
+    <script src="javascript/script.js">
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    
  </body>
  </html>    
