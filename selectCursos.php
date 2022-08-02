@@ -15,14 +15,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos/cursos.css">
     
     <title>Seleccionar curso</title>
 </head>
 <body>
+    <div class="container mt-3">
+        <div class="spinner-grow" role="status">
+        <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+
     <?php
-        include_once("navbar.php");
+    include_once("navbar.php");
     ?>
-    <form action="log/logout.php">
+
+
+    <form action="log/logout.php" class="box">
         <button type="submit" class="btn btn-dark" >Cerrar sesion</a></button>
     </form>   
     <div class="m-0 vh-100 row justify-content-center align-items-center" >
@@ -62,6 +72,7 @@
             </form>
         </div>    
     </div> 
+
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
