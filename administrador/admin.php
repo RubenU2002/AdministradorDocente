@@ -117,6 +117,7 @@
             <th>Nueva Posicion</th>
             <th>Antigua Posicion</th>
             <th>Nuevo Porcentaje</th>
+            <th>Viejo Porcentaje</th>
             <th>Nueva Descripcion</th>
             <th>Vieja descripcion</th>
             </tr>
