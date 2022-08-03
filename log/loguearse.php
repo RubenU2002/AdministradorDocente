@@ -10,7 +10,12 @@
     if($cantidad>0){
         $_SESSION['codigo_user']=$user;
         $_SESSION['nombre_user']=$row->nomb_doc;
-        header("location:../selectCursos.php");
+        if($row->nomb_doc=='ADMIN'){
+            header("location:../administrador/admin.php");
+        }
+        else{
+           header("location:../selectCursos.php");
+        }   
     }else{
         header("location:fallo.php");
     }
