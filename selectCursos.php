@@ -41,7 +41,7 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link1" href="#">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
@@ -113,10 +113,10 @@
 
     <div class="slider animated bounceInDown">
       <ul>
-        <li><img src="imagenes/1.jpg" alt=""></li>
-        <li><img src="imagenes/2.jpg" alt=""></li>
-        <li><img src="imagenes/3.jpg" alt=""></li>
-        <li><img src="imagenes/4.jpg" alt=""></li>
+        <li><img src="imagenes/img1.jpg" alt=""></li>
+        <li><img src="imagenes/img2.jpg" alt=""></li>
+        <li><img src="imagenes/img3.png" alt=""></li>
+        <li><img src="imagenes/img4.jpg" alt=""></li>
       </ul>
     </div>
 </div>

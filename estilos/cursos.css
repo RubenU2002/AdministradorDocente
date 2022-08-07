@@ -1,34 +1,61 @@
 body{
     background: linear-gradient(to left, #e2eafc, #022b3a);
 }  
-.nav-item{
+
+.offcanvas-body li a[class="nav-link1"]{
     font-size: 20px;
     font-family: georgia;
+    color: #cad2c5;
 }
+
+.offcanvas-body li a[class="nav-link"]{
+    font-size: 20px;
+    font-family: georgia;
+    color: #cad2c5;
+}
+
+.offcanvas-body li a[class="nav-link dropdown-toggle"]{
+    font-size: 20px;
+    font-family: georgia;
+    color: #cad2c5;
+}
+.offcanvas-body li a[class="dropdown-item"]{
+    font-size: 15px;
+    font-family: georgia;
+    color: #022b3a;
+}
+.offcanvas-body li a[class="dropdown-item"]:hover{
+    font-size: 15px;
+    font-family: georgia;
+    color: #022b3a;
+    background: #a9def9;
+}
+
 .box{
     position:absolute;
-    right: 0;
-    bottom: 0;
+    right: 3px;
+    bottom: 5px;
 }
 .box button[type="submit"]{
     border:0px;
     padding:10px 5px;
     text-align: center;
-    border:2px solid #022b3a; 
-    width: 150px;
+    border:1px solid #022b3a; 
+    width: 110px;
     outline: none;
     border-radius: 30px;
     transition: 0.25s;
-    background: #edede9;
+    background: #8ecae6;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 16px;
     font-family: georgia;
-    color: #003049;
+    color: #022b3a;
 }
 
 .box button[type="submit"]:hover{
     background:#022b3a;
-    color: #edede9;
+    color:#8ecae6 ;
+    
 }
 
 .container-fluid{
@@ -51,6 +78,7 @@ body{
 
 .offcanvas-body{    
     background: linear-gradient(to right, #1d3557, #8ecae6);
+   
 }
 
 .offcanvas-title{
@@ -63,7 +91,7 @@ body{
 .container{
     display: flex;
     position: absolute;
-    left: 20px;
+    left: 100px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -74,7 +102,7 @@ body{
     background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4);  
     background: linear-gradient(to right, #b6fbff, #83a4d4); 
 
-    box-shadow: 10px -10px 10px 5px #0F2027;
+    box-shadow: 10px 10px 10px 5px #0F2027;
  }
 
  
@@ -121,13 +149,14 @@ body{
 
 .slider{
     position: absolute;
-    right: 30px;
+    right: 100px;
     top: 150px;
     width: 50%;
-    height: 500px;
+    height: 50%;
     margin: auto;
     overflow: hidden;
-
+    border-radius: 40px;
+    box-shadow: 10px 10px 20px 5px #0F2027;
 }
 .slider ul{
     display: flex;
@@ -144,8 +173,7 @@ body{
 .slider li img{
     border-radius: 40px;
     width: 100%;
-
-    box-shadow: 10px -10px 10px 5px #0F2027;
+    height: 400px;
 }
 
 @keyframes slider{
