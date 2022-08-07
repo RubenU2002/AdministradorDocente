@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="estilos/loader.css">
     <link rel="stylesheet" href="estilos/styles.css">
 </head>
-<body style="overflow-x:hidden; overflow-y:hidden">
+<body>
 
     <div class="contenedor_loader">
         <div class="loader"></div>
