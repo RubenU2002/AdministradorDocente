@@ -19,8 +19,7 @@ body{
     outline: none;
     border-radius: 30px;
     transition: 0.25s;
-    background: #1f7a8c;
-    color:#e1e5f2;
+    background: #edede9;
     cursor: pointer;
     font-size: 20px;
     font-family: georgia;
@@ -29,7 +28,7 @@ body{
 
 .box button[type="submit"]:hover{
     background:#022b3a;
-    color: #b5e48c;
+    color: #edede9;
 }
 
 .container-fluid{
@@ -47,22 +46,16 @@ body{
 }
 
 .offcanvas-header{
-    background: #00416A;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to top, #E4E5E6, #00416A);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to top, #E4E5E6, #00416A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: linear-gradient(to right, #1d3557, #8ecae6);
 }
 
-.offcanvas-body{
-    background: #00416A;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #E4E5E6, #00416A);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #E4E5E6, #00416A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+.offcanvas-body{    
+    background: linear-gradient(to right, #1d3557, #8ecae6);
 }
 
 .offcanvas-title{
     font-family: georgia;
-    color: #023047;
+    color: #cad2c5;
 }
 
 
@@ -126,4 +119,45 @@ background: linear-gradient(to bottom, #E4E5E6, #00416A); /* W3C, IE 10+/ Edge, 
     background:#caf0f8;
 }
 
+.slider{
+    position: absolute;
+    right: 30px;
+    top: 150px;
+    width: 50%;
+    height: 500px;
+    margin: auto;
+    overflow: hidden;
 
+}
+.slider ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+
+    animation: slider 20s infinite alternate;
+    animation-timing-function: linear;
+}
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+.slider li img{
+    border-radius: 40px;
+    width: 100%;
+
+    box-shadow: 10px -10px 10px 5px #0F2027;
+}
+
+@keyframes slider{
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}

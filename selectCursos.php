@@ -110,6 +110,15 @@
             </form>
         </div> 
     </div>
+
+    <div class="slider animated bounceInDown">
+      <ul>
+        <li><img src="imagenes/1.jpg" alt=""></li>
+        <li><img src="imagenes/2.jpg" alt=""></li>
+        <li><img src="imagenes/3.jpg" alt=""></li>
+        <li><img src="imagenes/4.jpg" alt=""></li>
+      </ul>
+    </div>
 </div>
 
 
