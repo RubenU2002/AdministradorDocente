@@ -98,8 +98,8 @@
                 <td><?php echo $mostrar->periodo ?></td>
                 <td><?php echo $mostrar->posicion_new ?></td>
                 <td><?php echo $mostrar->posicion_old ?></td>
-                <td><?php echo $mostrar->porcentaje_new ?></td>
-                <td><?php echo $mostrar->porcentaje_old ?></td>
+                <td><?php echo $mostrar->porcentaje_new ?>%</td>
+                <td><?php echo $mostrar->porcentaje_old ?>%</td>
                 <td><?php echo $mostrar->descrip_new ?></td>
                 <td><?php echo $mostrar->descrip_old ?></td>
             </tr>
