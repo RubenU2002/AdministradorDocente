@@ -1,0 +1,135 @@
+body{
+	background: linear-gradient(to bottom, #e2eafc, #022b3a);
+    font-family: georgia;
+}
+
+#table-container{
+	margin: 150px auto;
+	width: 600px;
+	border-radius: 20px;
+}
+
+table{
+	background-color: white;
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+	border-radius: 20px;
+}
+
+th, td{
+	padding: 20px;
+}
+
+thead{
+	background: #B993D6;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #8CA6DB, #B993D6);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #8CA6DB, #B993D6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	font-size: 15px;
+	border-bottom: solid 1px #0F362D;
+	color: #0d1b2a;
+}
+
+
+tr:hover td{
+	background-color: #8CA6DB;
+}
+
+<!--Botones-->
+
+.btn{
+	border: none;
+	background: #B993D6;
+	color: black;
+}
+
+<!--navbar-->
+
+.offcanvas-body li a[class="nav-link1"]{
+    font-size: 20px;
+    font-family: georgia;
+    color: #022b3a; 	
+}
+
+.offcanvas-body li a[class="nav-link"]{
+    font-size: 20px;
+    font-family: georgia;
+    color: #cad2c5;
+}
+
+.offcanvas-body li a[class="nav-link dropdown-toggle"]{
+    font-size: 20px;
+    font-family: georgia;
+    color: #cad2c5;
+}
+.offcanvas-body li a[class="dropdown-item"]{
+    font-size: 15px;
+    font-family: georgia;
+    color: #022b3a;
+}
+.offcanvas-body li a[class="dropdown-item"]:hover{
+    font-size: 15px;
+    font-family: georgia;
+    color: #022b3a;
+    background: #a9def9;
+}
+
+.box{
+    position:absolute;
+    right: 3px;
+    bottom: 5px;
+}
+.box button[type="submit"]{
+    border:0px;
+    padding:10px 5px;
+    text-align: center;
+    border:1px solid #022b3a; 
+    width: 110px;
+    outline: none;
+    border-radius: 30px;
+    transition: 0.25s;
+    background: #8ecae6;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: georgia;
+    color: #022b3a;
+}
+
+.box button[type="submit"]:hover{
+    background:#022b3a;
+    color:#8ecae6 ;
+    
+}
+
+.container-fluid{
+    background: linear-gradient(to right, #e2eafc, #022b3a);
+    font-family: georgia;
+    color: #0d1b2a;
+    position: absolute;
+    left:0;
+    top: 0;
+}
+
+.container-fluid h4{
+    position: absolute;
+    left: 95px;
+}
+
+.offcanvas-header{
+    background: linear-gradient(to right, #1d3557, #8ecae6);
+}
+
+.offcanvas-body{    
+    background: linear-gradient(to right, #1d3557, #8ecae6);
+   
+}
+
+.offcanvas-title{
+    font-family: georgia;
+    color: #cad2c5;
+}
+
+#recibirnombre{
+	border: none;
+	width: 250px;
+}
