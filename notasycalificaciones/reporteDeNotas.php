@@ -17,12 +17,22 @@
     <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+
+    <link rel="stylesheet" href="../estilos/reporteNotas.css">
+    <link rel="stylesheet" href="../estilos/loader.css">
+
     <title>Definitivas</title>
 </head>
 <body>
-    <h2>Registro de notas</h2>
+
+<div class="contenedor_loader">
+        <div class="loader"></div>
+    </div>
+
+
+    <h2> <img src="../imagenes/informe.png" width="40px">Reporte de notas</h2>
     <h3>Curso: <?php echo $cursos->nomb_cur ?></h3>
-    <div>
+    <div id="table-container">
     <table id="example" class="table table-striped" style="width:100%">
       <thead>
         <tr>
@@ -76,6 +86,12 @@
       </tfoot>
     </table>
   </div>
+
+  <form action="../selectCursos.php">
+        <button type="submit" class="home"><img src="../imagenes/home.png" width="50px"></button>
+    </form>
+
+  <script src="../javascript/script.js"></script> 
   <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
