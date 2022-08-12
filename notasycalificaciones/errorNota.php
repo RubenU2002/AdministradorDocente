@@ -14,17 +14,33 @@
     <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+
+    <link rel="stylesheet" href="../estilos/notas.css">
+    <link rel="stylesheet" href="../estilos/loader.css">
+
     <title>Agregar Notas</title>
 </head>
 <body>
+
+<div class="contenedor_loader">
+        <div class="loader"></div>
+    </div>
+
+    <nav class="navbar bg-light fixed-top" >
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="../imagenes/notas.png" width="50px"></a>
+    <h4>REGISTRO DE NOTAS</h4>
+      </div>
+</nav>
+
     <br>
 <div class="alert alert-danger alert-dismissible fade show" role="alert">
     <strong>La posición de la nota ya existe! intente con una diferente</strong><br>
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
     <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalnotas">
-    [+] Agregar nota
+<button type="button" class="boton" data-bs-toggle="modal" data-bs-target="#modalnotas">
+<img src="../imagenes/agregar-archivo.png" width="30px">Agregar nota
 </button>
 
 <!-- Modal insertar notas -->
@@ -101,7 +117,7 @@
 </div>
 <!---------------------->
 <br>
-  <div>
+  <div id="table-container">
     <table id="tablanotas" class="table table-striped" style="width:100%">
       <thead>
         <tr>
@@ -166,6 +182,8 @@
       </tfoot>
     </table>
   </div>
+
+  <script src="../javascript/script.js"></script> 
 <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>

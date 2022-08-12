@@ -14,12 +14,27 @@
     <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+
+    <link rel="stylesheet" href="../estilos/notas.css">
+    <link rel="stylesheet" href="../estilos/loader.css">
     <title>Agregar Notas</title>
 </head>
 <body>
+
+<div class="contenedor_loader">
+        <div class="loader"></div>
+    </div>
+
+<nav class="navbar bg-light fixed-top" >
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="../imagenes/notas.png" width="50px"></a>
+    <h4>REGISTRO DE NOTAS</h4>
+      </div>
+</nav>
+
     <!-- Button trigger modal insertar notas -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalnotas">
-    [+] Agregar nota
+<button type="button" class="boton" data-bs-toggle="modal" data-bs-target="#modalnotas">
+    <img src="../imagenes/agregar-archivo.png" width="30px">Agregar Nota
 </button>
 
 <!-- Modal insertar notas -->
@@ -31,12 +46,12 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="../modificaciones/aggNotaCurso.php" method="POST">
-        <div class="modal-body">
-            Posicion: <br><input name="posNota"placeholder="Numero de nota" type="number" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" min="1" required> 
+        <div class="modal-body1">
+            Posicion: <br><input name="posNota"placeholder="Numero de nota" type="number" id="nota" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" min="1" required> 
             <br>
-            Descripcion: <br> <input type="text" name="descripNota" maxlength="30" placeholder="Describa la nota" required>
+            Descripcion: <br> <input type="text" id="descripNo" name="descripNota" maxlength="30" placeholder="Describa la nota" required>
             <br>
-            Porcentaje <br><input max="100" type="number" placeholder="%" name="porcentNota" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" min="1" required>
+            Porcentaje <br><input max="100" type="number" id="porcentaje" placeholder="%" name="porcentNota" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" min="1" required>
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -55,7 +70,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="../modificaciones/actualizarNotaCurso.php" method="POST">
-        <div class="modal-body">
+        <div class="modal-body2">
             Posicion: <br><input id="recibirposicion" name="posNota"placeholder="Numero de nota"type="number" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" min="1" required> 
             <br>
             Descripcion: <br> <input type="text" id="recibirdescrip" name="descripNota" maxlength="30" placeholder="Describa la nota" required>
@@ -78,7 +93,7 @@
         <h5 class="modal-title" id="modalconfirmacion">¿Esta seguro?</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body3">
         <form action="../modificaciones/eliminarNota.php" method="POST">
         ¿Seguro desea borrar la nota <input id="recibirdescrip1" type="text" name ="descripNota" disabled class="text-center">  del curso?
       </div>
@@ -96,7 +111,7 @@
 </div>
 <!---------------------->
 <br>
-  <div>
+  <div id="table-container">
     <table id="tablanotas" class="table table-striped" style="width:100%">
       <thead>
         <tr>
@@ -161,6 +176,12 @@
       </tfoot>
     </table>
   </div>
+
+  <form action="log/logout.php" class="box">
+        <button type="submit" class="btn btn-dark" >Cerrar sesión</a></button>
+        </form>
+
+        <script src="../javascript/script.js"></script>   
 <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>

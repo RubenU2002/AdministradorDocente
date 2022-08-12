@@ -126,6 +126,8 @@ background: linear-gradient(to bottom, #2ebf91, #8360c3); /* W3C, IE 10+/ Edge, 
 	background: -webkit-linear-gradient(to right, #8CA6DB, #B993D6);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to right, #8CA6DB, #B993D6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+    color: #0d1b2a;
+    border-radius: 20px;
 }
 
 
