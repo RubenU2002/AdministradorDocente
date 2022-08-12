@@ -18,11 +18,21 @@
     <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+
+    <link rel="stylesheet" href="../estilos/notasEstu.css">
+    <link rel="stylesheet" href="../estilos/loader.css">
+
     <title>Escribir Notas</title>
 </head>
 <body>
+
+
+<div class="contenedor_loader">
+        <div class="loader"></div>
+    </div>
+
   <?php echo $nota; ?>
-    <h1>Registro de notas de: <?php echo $cursos->nomb_cur ?></h1>
+    <h1> <img src="../imagenes/nota-adhesiva.png" width="40px">Registro de notas de: <?php echo $cursos->nomb_cur ?></h1>
     <h2>Descripcion: <?php echo $notas->desc_nota ?> </h2>
     <h2>Porcentaje: <?php echo  $notas->porcentaje?>% </h2>
     <br>
@@ -47,7 +57,7 @@
     </div>
     </div>
     <br>
-  <div>
+  <div id="table-container">
     <table id="example" class="table table-striped" style="width:100%">
       <thead>
         <tr>
@@ -90,8 +100,10 @@
     </table>
   </div>
   <form action="reporteDeNotas.php">
-      <button type="submit">Reporte de notas</button>
+      <button type="submit" class="botonRe">Reporte de notas</button>
     </form>
+
+    <script src="../javascript/script.js"></script> 
   <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
