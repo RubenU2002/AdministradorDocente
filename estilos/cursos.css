@@ -2,35 +2,6 @@ body{
     background: linear-gradient(to left, #e2eafc, #022b3a);
 }  
 
-.offcanvas-body li a[class="nav-link1"]{
-    font-size: 20px;
-    font-family: georgia;
-    color: #cad2c5;
-}
-
-.offcanvas-body li a[class="nav-link"]{
-    font-size: 20px;
-    font-family: georgia;
-    color: #cad2c5;
-}
-
-.offcanvas-body li a[class="nav-link dropdown-toggle"]{
-    font-size: 20px;
-    font-family: georgia;
-    color: #cad2c5;
-}
-.offcanvas-body li a[class="dropdown-item"]{
-    font-size: 15px;
-    font-family: georgia;
-    color: #022b3a;
-}
-.offcanvas-body li a[class="dropdown-item"]:hover{
-    font-size: 15px;
-    font-family: georgia;
-    color: #022b3a;
-    background: #a9def9;
-}
-
 .box{
     position:absolute;
     right: 3px;
@@ -70,20 +41,6 @@ body{
 .container-fluid h4{
     position: absolute;
     left: 80px;
-}
-
-.offcanvas-header{
-    background: linear-gradient(to right, #1d3557, #8ecae6);
-}
-
-.offcanvas-body{    
-    background: linear-gradient(to right, #1d3557, #8ecae6);
-   
-}
-
-.offcanvas-title{
-    font-family: georgia;
-    color: #cad2c5;
 }
 
 .container{

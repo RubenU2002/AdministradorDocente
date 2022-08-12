@@ -34,7 +34,7 @@
                 </form>
                 </div>  
     </div>
-    <script src="javascript/script.js">
+    <script src="javascript/script.js"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     
  </body>
