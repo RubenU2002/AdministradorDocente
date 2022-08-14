@@ -30,8 +30,6 @@
 <div class="contenedor_loader">
         <div class="loader"></div>
     </div>
-
-  <?php echo $nota; ?>
     <h1> <img src="../imagenes/nota-adhesiva.png" width="40px">Registro de notas de: <?php echo $cursos->nomb_cur ?></h1>
     <h2>Descripcion: <?php echo $notas->desc_nota ?> </h2>
     <h2>Porcentaje: <?php echo  $notas->porcentaje?>% </h2>
