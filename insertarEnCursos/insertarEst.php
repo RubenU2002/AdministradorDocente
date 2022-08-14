@@ -159,7 +159,7 @@
             Inscribir Estudiante
           </button>
 
-      <form action="notasycalificaciones/insertarNotas.php">
+      <form action="../notasycalificaciones/insertarNotas.php">
         <button type="submit" class="bttn">Notas del curso</button>
       </form>
 
